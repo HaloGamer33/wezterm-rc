@@ -20,6 +20,7 @@ config.keys = {
     { key = 't', mods = 'ALT', action = act.SpawnCommandInNewTab },
     { key = ',', mods = 'CTRL', action = act.MoveTabRelative(-1) },
     { key = '.', mods = 'CTRL', action = act.MoveTabRelative(1) },
+    { key = 'Backspace', mods = 'CTRL', action = wezterm.action.SendString('\x17'), }
 }
 
 
