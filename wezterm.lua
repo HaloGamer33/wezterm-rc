@@ -15,7 +15,7 @@ end
 
 config.enable_wayland = false
 
-config.color_scheme = 'Oxocarbon Dark (Gogh)'
+config.color_scheme = 'Oxocarbon Dark'
 
 config.keys = {
     { key = 'w', mods = 'ALT', action = act.CloseCurrentTab { confirm = true }, },
