@@ -17,6 +17,9 @@ config.enable_wayland = false
 
 config.color_scheme = 'Oxocarbon Dark'
 
+config.use_fancy_tab_bar = false
+
+
 config.keys = {
     { key = 'w', mods = 'ALT', action = act.CloseCurrentTab { confirm = true }, },
     { key = 'j', mods = 'ALT', action = act.ActivateTabRelative(-1) },
@@ -53,7 +56,7 @@ config.font_size = 14
 config.background = { -- Setting background
     {
         source = {
-            Color = '#0C0C0C'
+            Color = '#161616'
         },
         width = '100%',
         height = '100%',
