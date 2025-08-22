@@ -47,11 +47,15 @@ config.mouse_bindings = {
 
 config.font = wezterm.font_with_fallback {
     'HackNerdFontMono',
-    'Weather Icons',
+    -- 'Weather Icons',
 }
 config.font_size = 14
 -- config.font_size = 20 -- Temporal
--- config.default_prog = { 'nu' } -- Set Powershell
+
+local is_linux = wezterm.target_triple:find("linux") ~= nil
+if is_linux then
+    config.default_prog = { '/bin/bash' } -- Set Powershell
+end
 
 config.background = { -- Setting background
     {
