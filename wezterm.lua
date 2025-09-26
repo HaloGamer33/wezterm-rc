@@ -45,7 +45,8 @@ config.background = {
 
 local is_linux = wezterm.target_triple:find("linux") ~= nil
 if is_linux then
-    config.default_prog = { '/bin/bash' }
+    -- config.default_prog = { '/bin/bash' }
+    config.default_prog = { '/bin/zsh' }
 end
 
 config.keys = {
