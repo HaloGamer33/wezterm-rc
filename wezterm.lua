@@ -36,7 +36,7 @@ config.color_scheme = 'Oxocarbon Dark'
 config.use_fancy_tab_bar = false
 config.font_size = 14
 config.font = wezterm.font_with_fallback {
-    'HackNerdFontMono'
+    '0xProto Nerd Font Mono'
 }
 
 config.background = {
