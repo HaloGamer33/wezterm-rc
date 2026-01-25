@@ -47,12 +47,11 @@ config.background = {
         width = '100%',
         height = '100%',
     },
---     {
---         source = {
---             File = 'C:/Users/HaloGamer33/.config/wezterm/wallpapers/terminal.jpg',
---         },
---         opacity = 0.75,
---     },
+    {
+        source = {
+            File = '/home/halo/Wallpaper/wallhaven-o5rjq9.png'
+        },
+    },
 }
 
 -- ┌─────────────────────────────────────────────────────────┐
