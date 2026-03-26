@@ -32,6 +32,7 @@ wezterm.on(
     end
 )
 
+config.hide_tab_bar_if_only_one_tab = true
 config.color_scheme = 'Oxocarbon Dark'
 config.use_fancy_tab_bar = false
 config.font_size = 14
@@ -72,10 +73,10 @@ if is_linux then
 end
 
 config.keys = {
-    { key = 'w', mods = 'ALT', action = act.CloseCurrentTab { confirm = true }, },
-    { key = 'j', mods = 'ALT', action = act.ActivateTabRelative(-1) },
-    { key = 'k', mods = 'ALT', action = act.ActivateTabRelative(1) },
-    { key = 't', mods = 'ALT', action = act.SpawnCommandInNewTab },
+    -- { key = 'w', mods = 'ALT', action = act.CloseCurrentTab { confirm = true }, },
+    -- { key = 'j', mods = 'ALT', action = act.ActivateTabRelative(-1) },
+    -- { key = 'k', mods = 'ALT', action = act.ActivateTabRelative(1) },
+    -- { key = 't', mods = 'ALT', action = act.SpawnCommandInNewTab },
     { key = ',', mods = 'CTRL', action = act.MoveTabRelative(-1) },
     { key = '.', mods = 'CTRL', action = act.MoveTabRelative(1) },
     -- { key = 'Backspace', mods = 'CTRL', action = wezterm.action.SendString('\x1b\x7f') },
