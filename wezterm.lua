@@ -2,7 +2,7 @@ local wezterm = require('wezterm')
 local act = wezterm.action
 
 if wezterm.config_builder then
-  Config = wezterm.config_builder()
+    Config = wezterm.config_builder()
 end
 
 -- ┌─────────────────────────────────────────────────────────┐
@@ -14,14 +14,14 @@ end
 -- or `wezterm cli set-tab-title`, but falls back to the
 -- title of the active pane in that tab.
 local function tab_title(tab_info)
-  local title = tab_info.tab_title
-  -- if the tab title is explicitly set, take that
-  if title and #title > 0 then
-    return title
-  end
-  -- Otherwise, use the title from the active pane
-  -- in that tab
-  return string.format(' %i ', tab_info.tab_index + 1)
+    local title = tab_info.tab_title
+    -- if the tab title is explicitly set, take that
+    if title and #title > 0 then
+        return title
+    end
+    -- Otherwise, use the title from the active pane
+    -- in that tab
+    return string.format(' %i ', tab_info.tab_index + 1)
 end
 
 wezterm.on(
