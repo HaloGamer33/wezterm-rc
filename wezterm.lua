@@ -40,6 +40,28 @@ Config.font = wezterm.font_with_fallback {
     '0xProto Nerd Font Mono'
 }
 
+local function runProgram(program)
+    local programHandler = io.popen(program, "r")
+    if programHandler == nil then
+        return nil
+    end
+    return programHandler:read("a")
+end
+
+local function getRandomWallpaper()
+    local wallpapersPath = "/home/halo/halo-stash/3-Resources/Media/1-Photo/Wallpaper/Terminal/"
+    local loggingFile = io.open("/tmp/wezterm.log", "w")
+    if loggingFile == nil then
+        return
+    end
+    local contents = runProgram("ls " .. wallpapersPath)
+    contents = wallpapersPath .. contents
+    loggingFile:write(contents)
+    return contents
+end
+
+local wallpaper = getRandomWallpaper()
+
 Config.background = {
     {
         source = {
@@ -50,7 +72,9 @@ Config.background = {
     },
     {
         source = {
-            File = '/home/halo/Wallpaper/wallhaven-o5rjq9.png'
+            -- File = '/home/halo/Wallpaper/wallhaven-o5rjq9.png'
+            File = '/home/halo/halo-stash/3-Resources/Media/1-Photo/Wallpaper/Terminal/wallhaven-5g6kv8.png'
+            -- File = wallpaper
         },
     },
 }
